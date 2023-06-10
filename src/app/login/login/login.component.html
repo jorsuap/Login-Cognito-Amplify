@@ -1,0 +1,18 @@
+<div class="flex justify-content-center align-items-center flex-column gap-2 login">
+  <i class="pi pi-user" style="font-size: 3.5rem"></i>
+  <div  class="flex flex-column gap-2">
+    <label htmlFor="email">Email</label>
+    <span class="p-input-icon-right">
+      <i class="pi pi-user"></i>
+      <input pInputText id="username" name="email" aria-describedby="username-help" [(ngModel)]="email" />
+  </span>
+  </div>
+  <div  class="flex flex-column gap-2">
+    <label htmlFor="username">Password</label>
+    <p-password [(ngModel)]="password" [toggleMask]="true" name="password"></p-password>
+  </div>
+  <p>Iniciar con</p>
+  <p-button label="Facebook"  icon="pi pi-facebook"></p-button>
+  <p-button label="Google" class="google" styleClass="p-button-warning"  icon="pi pi-google"></p-button>
+  <a routerLink="/user/register">Crear una cuenta</a>
+</div>

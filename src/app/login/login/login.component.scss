@@ -1,0 +1,19 @@
+.login{
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(var(--green-50), var(--green-100),  var(--green-200) );
+  .pi-user{
+    margin-bottom: 20px;
+    color: #454f58;
+  }
+  a{
+    margin-top: 20px;
+  }
+  ::ng-deep{
+
+    .p-button.p-button-warning{
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+  }
+}
