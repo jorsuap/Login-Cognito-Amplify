@@ -1,0 +1,22 @@
+<div class="profile flex justify-content-center align-items-center flex-column gap-3">
+  <div class="img-user">
+    <p-image [src]="imgUrl" alt="Image"  width="150"></p-image>
+  </div>
+  <div  class="flex flex-column gap-2">
+    <label htmlFor="userprofile">Email</label>
+    <span class="p-input-icon-right">
+      <i class="pi pi-user"></i>
+      <input pInputText id="userprofile" readonly [(ngModel)]="user.email" name="userprofile" aria-describedby="useremail-help"/>
+  </span>
+  </div>
+
+  <div  class="flex flex-column gap-2">
+    <label htmlFor="name">Actualiza tu nombre:</label>
+    <span class="p-input-icon-right">
+      <i class="pi pi-user-edit"></i>
+      <input pInputText id="name" [(ngModel)]="user.name" name="name" aria-describedby="username-help"/>
+  </span>
+  </div>
+  <p-button label="Update" class="update" icon="pi pi-upload" (click)="upDateUser()"></p-button>
+  <p-button label="Sign Out" class="signout" icon="pi pi-sign-out" (click)="signOut()" styleClass="p-button-outlined"></p-button>
+</div>

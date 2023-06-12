@@ -1,22 +1,31 @@
 <div class="flex justify-content-center align-items-center flex-column gap-2 register">
   <i class="pi pi-user" style="font-size: 3.5rem"></i>
-  <div  class="flex flex-column gap-2">
+  <!-- <div  class="flex flex-column gap-2">
     <label htmlFor="name">Nombre</label>
     <span class="p-input-icon-right">
       <i class="pi pi-pencil"></i>
-      <input pInputText id="username" name="name" aria-describedby="username-help" [(ngModel)]="fullName" />
+      <input pInputText id="username" name="name" aria-describedby="username-help" [(ngModel)]="user.name" />
   </span>
-  </div>
+  </div> -->
   <div  class="flex flex-column gap-2">
     <label htmlFor="email">Email</label>
     <span class="p-input-icon-right">
       <i class="pi pi-user"></i>
-      <input pInputText id="username" name="email" aria-describedby="username-help" [(ngModel)]="email" />
+      <input pInputText id="email" name="email" aria-describedby="useremail-help" [(ngModel)]="user.email" />
     </span>
   </div>
   <div  class="flex flex-column gap-2">
     <label htmlFor="username">Password</label>
-    <p-password [(ngModel)]="password" [toggleMask]="true" name="password"></p-password>
+    <p-password [(ngModel)]="user.password" [toggleMask]="true" name="password"></p-password>
   </div>
+  <p-button label="Sign Up"  icon="pi pi-sign-in" class="signup" (click)="signUp()"></p-button>
   <a routerLink="/user/login">Iniciar sesion</a>
 </div>
+
+<p-dialog [(visible)]="confirmCode" [style]="{width: '30vw', height:'50vh'}" [modal]="true">
+  <div class="flex  justify-content-center align-items-center flex-column gap-3">
+    <label htmlFor="confirmcode" class="text-xl font-medium">Confirme su codigo</label>
+    <input pInputText maxlength="6" id="confirmcode"  placeholder="000000" name="confirmcode" aria-describedby="confirmcode-help" [(ngModel)]="user.code" />
+    <p-button label="Confirmar" class="confirm" (click)="confirmSignUp()"></p-button>
+  </div>
+</p-dialog>

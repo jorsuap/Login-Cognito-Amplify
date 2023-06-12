@@ -7,11 +7,19 @@ import { FormsModule } from '@angular/forms';
 import { PasswordModule } from 'primeng/password';
 import { RegisterComponent } from './register/register.component';
 import { ButtonModule } from 'primeng/button';
+import { DialogModule } from 'primeng/dialog';
+import { InputMaskModule } from 'primeng/inputmask';
+import { ProfileComponent } from './profile/profile.component';
+import { ImageModule } from 'primeng/image';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CurrentUserService } from '../services/current-user/current-user.service';
+
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'profile', component: ProfileComponent },
 ];
 @NgModule({
   imports: [
@@ -20,11 +28,17 @@ const routes: Routes = [
     FormsModule,
     InputTextModule,
     PasswordModule,
-    ButtonModule
+    ButtonModule,
+    DialogModule,
+    InputMaskModule,
+    ImageModule,
+    ReactiveFormsModule
   ],
   declarations: [
     LoginComponent,
-    RegisterComponent
-  ]
+    RegisterComponent,
+    ProfileComponent
+  ],
+  // providers:[CurrentUserService]
 })
 export class LoginModule { }
