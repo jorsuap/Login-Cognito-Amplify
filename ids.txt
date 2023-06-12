@@ -1,0 +1,7 @@
+User pool name:ng-cognito-pragma
+User pool ID:eu-central-1_N2rmUL5ke
+Client ID:4auq5536titj8ehac7edmmtq3u
+
+User pool ID: eu-central-1_R7kFu6Sp5
+User pool name: cognito-test-with-name
+Client ID: 1blo7cuil0m9o1o9inles5s4s
